@@ -2,30 +2,38 @@ import readlineSync from 'readline-sync';
 
 const isEven = (number) => (number % 2 == 0) ? 'yes' : 'no';
 
-const quiz = (numbers, playerName) => {
-	for (let i = 0; i < numbers.length; i++) {
-		const answer = readlineSync.question(numbers[i]+" четное?\n");
-		if (answer === isEven(numbers[i])) {
-			console.log("Верно!");
-		}
-		else {
-			return console.log('"' + answer + '" это неправильный ответ. Верный ответ был "' + isEven(numbers[i]) + '".\nПопробуй еще раз, ' + playerName + '...');
-		}
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+
+const quiz = (playerName, n) => {
+	if(n === 3) {
+		return console.log(`Congratulations, ${playerName}!`);
 	}
-	return console.log("Поздравляем, ты выиграл, " + playerName + "!");
+	const number = getRandomInt(1, 101);
+	console.log(`Question: ${number}`);
+	const answer = readlineSync.question(`Your answer: `);
+	if (answer === isEven(number)) {
+		console.log(`Correct!`);
+		quiz(playerName, n + 1);
+	}
+	else {
+		return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(number)}'.\nLet's try again, ${playerName}!`);
+	}
 };
 
 const getName = () => {
-	console.log('Добро пожаловать в Brain Games!!!');
-	const playerName = readlineSync.question('Могу я узнать ваше имя? ');
-	console.log(`Привет, ${playerName}!`);
+	console.log(`Welcome to the Brain Games!`);
+	const playerName = readlineSync.question(`May I have your name? `);
+	console.log(`Hello, ${playerName}!`);
 	return playerName;
 };
 
 export const game = () => {
 	const playerName = getName();
-	const questions = [15, 6, 7];
-	console.log('Отвечай "yes" если число четное, в противном случае отвечай "no".');
-	quiz(questions, playerName);
+	console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
+	quiz(playerName, 0);
 };
 
