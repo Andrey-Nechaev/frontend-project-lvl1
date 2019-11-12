@@ -7,6 +7,12 @@ export const getName = () => {
 	return playerName;
 };
 
+export const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+};
+
 export const gameFlow = (questionGenerator, checkAnswer, playerName, round) => {
 	if(round === 3) {
 		return console.log(`Congratulations, ${playerName}!`);
