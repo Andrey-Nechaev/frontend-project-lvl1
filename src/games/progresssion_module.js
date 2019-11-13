@@ -20,16 +20,7 @@ const progression = () => {
 	return makeString(``, initialValue, delta, 1);
 };
 
-const hiddenValue = (progressionStr) => {
-	return String(HV);
-	const findIt = (str, i) => {
-		const elem = str.split(` `)[i]
-		if (i ===  10) return elem;
-		if (elem === "..") return elem;
-		return findIt(str, i + 1);
-	}
-	return findIt(progressionStr, 0);
-};
+const hiddenValue = (unused) => String(HV);
 
 export const start = () => {
 	const playerName = getName();
