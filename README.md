@@ -5,7 +5,8 @@
 
 <h2>brain-even</h2>
 How to install package and run game see below.
-<a href="https://asciinema.org/a/LvPJc5OU3VdYRGjWvxfXeZyTf" target="_blank"><img src="https://asciinema.org/a/LvPJc5OU3VdYRGjWvxfXeZyTf.svg" /></a>
+<script id="asciicast-GNl2dL63Xa812yapi9M9axfTM" src="https://asciinema.org/a/GNl2dL63Xa812yapi9M9axfTM.js" async></script>
+
 
 <h2>brain-calc</h2>
 How to install package and run game see below.
