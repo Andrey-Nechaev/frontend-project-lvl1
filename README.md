@@ -7,7 +7,18 @@
 How to install package and run game see below.
 <a href="https://asciinema.org/a/GNl2dL63Xa812yapi9M9axfTM" target="_blank"><img src="https://asciinema.org/a/GNl2dL63Xa812yapi9M9axfTM.svg" /></a>
 
-
 <h2>brain-calc</h2>
 How to install package and run game see below.
-<a href="https://asciinema.org/a/4hj10HqIZh0RWbtA0zer7wjjl?t=12" target="_blank"><img src="https://asciinema.org/a/4hj10HqIZh0RWbtA0zer7wjjl.svg" /></a>
+<a href="https://asciinema.org/a/3TPHxmljhCVaDh7vQDkOvUD9c" target="_blank"><img src="https://asciinema.org/a/3TPHxmljhCVaDh7vQDkOvUD9c.svg" /></a>
+
+<h2>brain-gcd</h2>
+How to install package and run game see below.
+<a href="https://asciinema.org/a/7MiqtT7zd5iZXVAtjT9D7F9WV" target="_blank"><img src="https://asciinema.org/a/7MiqtT7zd5iZXVAtjT9D7F9WV.svg" /></a>
+
+<h2>brain-progression</h2>
+How to install package and run game see below.
+<a href="https://asciinema.org/a/eA7IrAQbiKgmxWANnISjK7eKf" target="_blank"><img src="https://asciinema.org/a/eA7IrAQbiKgmxWANnISjK7eKf.svg" /></a>
+
+<h2>brain-prime</h2>
+How to install package and run game see below.
+<a href="https://asciinema.org/a/NjywQkYZTvirKE5bejA2xWv1d" target="_blank"><img src="https://asciinema.org/a/NjywQkYZTvirKE5bejA2xWv1d.svg" /></a>
