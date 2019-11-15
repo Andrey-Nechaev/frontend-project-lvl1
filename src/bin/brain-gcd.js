@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { start }  from '../games/gcd_module';
+import { launch }  from '../games/gcd_module';
 
-start();
+launch();

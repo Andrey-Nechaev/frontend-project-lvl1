@@ -1,6 +1,6 @@
-import { getName, getRandomInt, gameFlow } from '../engine';
+import { game, getRandomInt } from '../engine';
 
-let HV = -1;
+let HV = null; // скрытое значение
 
 const progression = () => {
 	const initialValue = getRandomInt(1, 31);
@@ -22,8 +22,7 @@ const progression = () => {
 
 const hiddenValue = (unused) => String(HV);
 
-export const start = () => {
-	const playerName = getName();
-	console.log(`What number is missing in the progression?`);
-	gameFlow(progression, hiddenValue, playerName, 0);  // (функция, функция, строка, число)
+export const launch = () => {
+	const taskMsg = `What number is missing in the progression?`;
+	game(progression, hiddenValue, taskMsg);  // (функция, функция, строка)
 };

@@ -1,4 +1,4 @@
-import { getName, getRandomInt, gameFlow } from '../engine';
+import { game, getRandomInt } from '../engine';
 
 const number = () => getRandomInt(1, 102);
 
@@ -10,8 +10,7 @@ const isPrime = (num) => {
 	return (num % num === 0) ? "yes" : "no";
 };
 
-export const start = () => {
-	const playerName = getName();
-	console.log(`Answer "yes" if given number is prime. Otherwise answer "no".`);
-	gameFlow(number, isPrime, playerName, 0);  // (функция, функция, строка, число)
+export const launch = () => {
+	const taskMsg = `Answer "yes" if given number is prime. Otherwise answer "no".`;
+	game(number, isPrime, taskMsg);  // (функция, функция, строка)
 };

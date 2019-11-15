@@ -1,4 +1,4 @@
-import { getName, getRandomInt, gameFlow } from '../engine';
+import { game, getRandomInt } from '../engine';
 
 const twoNumbers = () => {
 	const num1 = getRandomInt(1, 101);
@@ -15,8 +15,7 @@ const check = (twoNumbers) => {
 	return String(gcd(num1, num2));
 };
 
-export const start = () => {
-	const playerName = getName();
-	console.log(`Find the greatest common divisor of given numbers.`);
-	gameFlow(twoNumbers, check, playerName, 0);  // (функция, функция, строка, число)
+export const launch = () => {
+	const taskMsg = `Find the greatest common divisor of given numbers.`;
+	game(twoNumbers, check, taskMsg);  // (функция, функция, строка)
 };

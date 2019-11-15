@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { start }  from '../games/prime_module';
+import { launch }  from '../games/prime_module';
 
-start();
+launch();

@@ -1,4 +1,4 @@
-import { getName, getRandomInt, gameFlow } from '../engine';
+import { game, getRandomInt } from '../engine';
 
 const randomOps = () => {
 	switch (getRandomInt(0,3)) {
@@ -8,16 +8,16 @@ const randomOps = () => {
 	}
 };
 
-export const start = () => {
-	const playerName = getName();
-	
-	const expression = () => {
+const expression = () => {
 		const num1 = getRandomInt(0, 101);
 		const ops = randomOps();
 		const num2 = getRandomInt(0, 101);
 		return `${num1} ${ops} ${num2}`;
-	}
-	const calculate = (expression) => String(eval(expression)); // функция
-	console.log(`What is the result of the expression?`);
-	gameFlow(expression, calculate, playerName, 0);  // (функция, функция, строка, число)
+}
+
+const calculate = (expression) => String(eval(expression)); // функция
+
+export const launch = () => {
+	const taskMsg = `What is the result of the expression?`;
+	game(expression, calculate, taskMsg);  // (функция, функция, строка)
 };
