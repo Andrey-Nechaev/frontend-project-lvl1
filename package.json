@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "First study project on Hexlet",
   "keywords": "games, cl games, brain-games, hexlet, study project",
   "main": "dist/index.js",
@@ -38,6 +38,7 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
+    "@hexlet/pairs": "^1.0.10",
     "readline-sync": "^1.4.10"
   }
 }

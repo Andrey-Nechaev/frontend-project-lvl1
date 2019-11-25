@@ -1,41 +1,31 @@
 import readlineSync from 'readline-sync';
-
-export const getName = () => {
-	console.log(`Welcome to the Brain Games!`);
-	const playerName = readlineSync.question(`May I have your name? `);
-	console.log(`Hello, ${playerName}!`);
-	return playerName;
-};
+import { car, cdr } from '@hexlet/pairs';
 
 export const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+  const result = Math.floor(Math.random() * (max - min + 1)) + min; // Максимум и минимум включаются
+  return result;
 };
 
-export const game = (questionGenerator, checkAnswer, taskMsg) => {
-
-	const gameFlow = (round) => {
-		if(round === 3) {
-			return console.log(`Congratulations, ${playerName}!`);
-		}
-		const question = questionGenerator();
-		const corectAnswer = checkAnswer(question);
-		console.log(`Question: ${question}`);
-		const playerAnswer = readlineSync.question(`Your answer: `);
-		if (playerAnswer === corectAnswer) {
-			console.log(`Correct!`);
-			gameFlow(round + 1);
-		}
-		else {
-			return console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'.\nLet's try again, ${playerName}!`);
-		}
-	};
-
-	const playerName = getName();
-	console.log(taskMsg);
-	return gameFlow(0);
+export const game = (step, taskMsg) => {
+  console.log('Welcome to the Brain Games!');
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
+  console.log(taskMsg);
+  const gameFlow = (round) => {
+    const roundsCount = 3;
+    if (round === roundsCount) {
+      return console.log(`Congratulations, ${playerName}!`);
+    }
+    const pairQA = step();
+    const question = car(pairQA);
+    const corectAnswer = cdr(pairQA);
+    console.log(`Question: ${question}`);
+    const playerAnswer = readlineSync.question('Your answer: ');
+    if (playerAnswer === corectAnswer) {
+      console.log('Correct!');
+      return gameFlow(round + 1);
+    }
+    return console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'.\nLet's try again, ${playerName}!`);
+  };
+  gameFlow(0);
 };
-
-
-
