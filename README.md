@@ -3,22 +3,20 @@
 <a href="https://codeclimate.com/github/Andrey-Nechaev/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/661c90e6044be823661b/test_coverage" /></a>
 [![Build Status](https://travis-ci.org/Andrey-Nechaev/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Andrey-Nechaev/frontend-project-lvl1)
 
-<h2>brain-even</h2>
-How to install package and run game see below.
-<a href="https://asciinema.org/a/GNl2dL63Xa812yapi9M9axfTM" target="_blank"><img src="https://asciinema.org/a/GNl2dL63Xa812yapi9M9axfTM.svg" /></a>
+<h2>Install brain-games package</h2>
+<a href="https://asciinema.org/a/O1eBuRxOeMnCNGfctIQIUQ5CX" target="_blank"><img src="https://asciinema.org/a/O1eBuRxOeMnCNGfctIQIUQ5CX.svg" /></a>
 
-<h2>brain-calc</h2>
-How to install package and run game see below.
-<a href="https://asciinema.org/a/3TPHxmljhCVaDh7vQDkOvUD9c" target="_blank"><img src="https://asciinema.org/a/3TPHxmljhCVaDh7vQDkOvUD9c.svg" /></a>
+<h2>Gameplay brain-even</h2>
+<a href="https://asciinema.org/a/2WIND2vn2XscGx3sAVhtMyPEM" target="_blank"><img src="https://asciinema.org/a/2WIND2vn2XscGx3sAVhtMyPEM.svg" /></a>
 
-<h2>brain-gcd</h2>
-How to install package and run game see below.
-<a href="https://asciinema.org/a/7MiqtT7zd5iZXVAtjT9D7F9WV" target="_blank"><img src="https://asciinema.org/a/7MiqtT7zd5iZXVAtjT9D7F9WV.svg" /></a>
+<h2>Gameplay brain-calc</h2><a href="https://asciinema.org/a/elNgXY58mJUAJtQ1Qem3ch44W" target="_blank"><img src="https://asciinema.org/a/elNgXY58mJUAJtQ1Qem3ch44W.svg" /></a>
 
-<h2>brain-progression</h2>
-How to install package and run game see below.
-<a href="https://asciinema.org/a/eA7IrAQbiKgmxWANnISjK7eKf" target="_blank"><img src="https://asciinema.org/a/eA7IrAQbiKgmxWANnISjK7eKf.svg" /></a>
+<h2>Gameplay brain-gcd</h2>
+<a href="https://asciinema.org/a/xQADWN6A7hABEtH2ZZ1UwRDt3" target="_blank"><img src="https://asciinema.org/a/xQADWN6A7hABEtH2ZZ1UwRDt3.svg" /></a>
 
-<h2>brain-prime</h2>
-How to install package and run game see below.
-<a href="https://asciinema.org/a/NjywQkYZTvirKE5bejA2xWv1d" target="_blank"><img src="https://asciinema.org/a/NjywQkYZTvirKE5bejA2xWv1d.svg" /></a>
+<h2>Gameplay brain-progression</h2>
+<a href="https://asciinema.org/a/c7KRlAoQGfgbe1vCSJX5wm4CJ" target="_blank"><img src="https://asciinema.org/a/c7KRlAoQGfgbe1vCSJX5wm4CJ.svg" /></a>
+
+<h2>Gameplay brain-prime</h2>
+<a href="https://asciinema.org/a/nNteMERWbuDNNNZZYbilbfuNj" target="_blank"><img src="https://asciinema.org/a/nNteMERWbuDNNNZZYbilbfuNj.svg" /></a>
+
