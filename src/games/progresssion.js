@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import { game, getRandomInt } from '../engine';
 
-const stepGenerator = () => {
+const generateRound = () => {
   const initialValue = getRandomInt(1, 30);
   const delta = getRandomInt(1, 10);
   const progressionLength = 10;
@@ -21,7 +21,6 @@ const stepGenerator = () => {
   return cons(makeString('', initialValue, 1), String(hiddenValue));
 };
 
-export default () => {
-  const taskMsg = 'What number is missing in the progression?';
-  game(stepGenerator, taskMsg);
-};
+const taskMessage = 'What number is missing in the progression?';
+
+export default () => game(generateRound, taskMessage);

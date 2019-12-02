@@ -6,26 +6,28 @@ export const getRandomInt = (min, max) => {
   return result;
 };
 
-export const game = (step, taskMsg) => {
+export const game = (generateRound, taskMessage) => {
   console.log('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
-  console.log(taskMsg);
+  console.log(taskMessage);
+
   const gameFlow = (round) => {
     const roundsCount = 3;
     if (round === roundsCount) {
-      return console.log(`Congratulations, ${playerName}!`);
+      console.log(`Congratulations, ${playerName}!`);
+      return;
     }
-    const pairQA = step();
+    const pairQA = generateRound();
     const question = car(pairQA);
     const corectAnswer = cdr(pairQA);
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === corectAnswer) {
       console.log('Correct!');
-      return gameFlow(round + 1);
-    }
-    return console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'.\nLet's try again, ${playerName}!`);
+      gameFlow(round + 1);
+    } else console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'.\nLet's try again, ${playerName}!`);
   };
+
   gameFlow(0);
 };
