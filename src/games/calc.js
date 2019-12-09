@@ -1,7 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomInt } from '../engine';
+import game from '../engine';
+import getRandomInt from '../utils';
 
-const calculateExpression = (num1, operator, num2) => {
+const calculateExpression = (num1, num2, operator) => {
   switch (operator) {
     case '+': return num1 + num2;
     case '-': return num1 - num2;

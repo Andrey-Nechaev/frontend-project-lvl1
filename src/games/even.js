@@ -1,5 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomInt } from '../engine';
+import game from '../engine';
+import getRandomInt from '../utils';
 
 const isEven = (number) => number % 2 === 0;
 

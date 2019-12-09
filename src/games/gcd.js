@@ -1,5 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomInt } from '../engine';
+import game from '../engine';
+import getRandomInt from '../utils';
 
 const gcd = (a, b) => ((b === 0) ? a : gcd(b, a % b));
 

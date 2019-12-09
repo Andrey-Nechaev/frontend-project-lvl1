@@ -1,24 +1,32 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomInt } from '../engine';
+import game from '../engine';
+import getRandomInt from '../utils';
+
+const progressionLength = 10;
 
 const generateRound = () => {
   const initialValue = getRandomInt(1, 30);
   const delta = getRandomInt(1, 10);
-  const progressionLength = 10;
-  const hidePosition = getRandomInt(1, progressionLength);
-  let hiddenValue = null;
+  const hiddenElementPosition = getRandomInt(1, progressionLength);
 
-  const makeString = (acc, elem, counter) => {
-    let newAcc = acc;
-    if (counter > progressionLength) return newAcc;
-    if (counter === hidePosition) {
-      hiddenValue = elem;
-      newAcc = `${acc} ..`;
-    } else newAcc = `${acc} ${elem}`;
-    return makeString(newAcc, elem + delta, counter + 1);
+  const makeSequence = (element, sequence, index) => {
+    if (index > progressionLength) return sequence;
+
+    const curentElement = initialValue + delta * index;
+    let curentSequence;
+    if (index === hiddenElementPosition) {
+      curentSequence = `${sequence} ..`;
+    } else {
+      curentSequence = `${sequence} ${curentElement}`;
+    }
+    const curentIndex = index + 1;
+    return makeSequence(curentElement, curentSequence, curentIndex);
   };
 
-  return cons(makeString('', initialValue, 1), String(hiddenValue));
+  const question = makeSequence(initialValue, '', 1);
+  const answer = String(initialValue + delta * hiddenElementPosition);
+
+  return cons(question, answer);
 };
 
 const taskMessage = 'What number is missing in the progression?';

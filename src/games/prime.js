@@ -1,5 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomInt } from '../engine';
+import game from '../engine';
+import getRandomInt from '../utils';
 
 const isPrime = (num) => {
   if (num < 2) return false;
