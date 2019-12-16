@@ -4,24 +4,21 @@ import getRandomInt from '../utils';
 
 const progressionLength = 10;
 
-const makeQuestion = (element, sequence, index, hiddenPosition, delta) => {
+const makeQuestion = (startElement, sequence, index, hiddenPosition, delta) => {
   if (index > progressionLength) return sequence;
-  const currentElement = element + delta;
+  const currentElement = startElement + delta * index;
+  let newElement = currentElement;
   let curentSequence;
   if (index === hiddenPosition) {
-    if (hiddenPosition === 1) {
-      curentSequence = '..';
-    } else {
-      curentSequence = `${sequence} ..`;
-    }
-  } else {
-    if (index === 1) {
-      curentSequence = `${currentElement}`;
-    } else {
-      curentSequence = `${sequence} ${currentElement}`;
-    }
+    newElement = '..';
   }
-  return makeQuestion(currentElement, curentSequence, index + 1, hiddenPosition, delta);
+  if (index === 1) {
+    curentSequence = newElement;
+  } else {
+    curentSequence = `${sequence} ${newElement}`;
+  }
+
+  return makeQuestion(startElement, curentSequence, index + 1, hiddenPosition, delta);
 };
 
 const generateRound = () => {
