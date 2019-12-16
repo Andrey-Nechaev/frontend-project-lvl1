@@ -1,8 +1,7 @@
-# frontend-project-lvl1
 <a href="https://codeclimate.com/github/Andrey-Nechaev/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/661c90e6044be823661b/maintainability" /></a>
 [![Build Status](https://travis-ci.org/Andrey-Nechaev/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Andrey-Nechaev/frontend-project-lvl1)
 
-# frontend-project-lvl1
+# Frontend-project-lvl1
 
 Command-line games as part of practical project on the Hexlet. The project contains 5 games:
 * Brain-even - You must determine is it even number or not.
@@ -24,6 +23,7 @@ From projects directory execute follow commands:
 `make publish`
 
 For example:
+
 <a href="https://asciinema.org/a/O1eBuRxOeMnCNGfctIQIUQ5CX" target="_blank"><img src="https://asciinema.org/a/O1eBuRxOeMnCNGfctIQIUQ5CX.svg" /></a>
 
 ## Built With
