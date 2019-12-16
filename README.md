@@ -5,8 +5,8 @@
 
 Command-line games as part of practical project on the Hexlet. The project contains 5 games:
 * Brain-even - You must determine is it even number or not.
-* Brain-calc - You must be calculate of random operation.
-* Brain-gcd - You must be find the greatest common divisor of random number.
+* Brain-calc - You must calculate of random operation.
+* Brain-gcd - You must find the greatest common divisor of random number.
 * Brain-progression - You must determine the missed number in the progression.
 * Brain-prime - You must detemine is it prime number or not.
 
