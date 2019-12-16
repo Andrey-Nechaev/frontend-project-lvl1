@@ -14,9 +14,9 @@ export default (generateRound, taskMessage) => {
       console.log(`Congratulations, ${playerName}!`);
       return;
     }
-    const pairQA = generateRound();
-    const question = car(pairQA);
-    const corectAnswer = cdr(pairQA);
+    const pairQuestionAnswer = generateRound();
+    const question = car(pairQuestionAnswer);
+    const corectAnswer = cdr(pairQuestionAnswer);
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === corectAnswer) {

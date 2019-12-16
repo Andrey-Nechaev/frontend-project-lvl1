@@ -5,10 +5,10 @@ import getRandomInt from '../utils';
 const gcd = (a, b) => ((b === 0) ? a : gcd(b, a % b));
 
 const generateRound = () => {
-  const num1 = getRandomInt(1, 100);
-  const num2 = getRandomInt(1, 100);
-  const question = `${num1} ${num2}`;
-  const answer = String(gcd(num1, num2));
+  const number1 = getRandomInt(1, 100);
+  const number2 = getRandomInt(1, 100);
+  const question = `${number1} ${number2}`;
+  const answer = String(gcd(number1, number2));
   return cons(question, answer);
 };
 
