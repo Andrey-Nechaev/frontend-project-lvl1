@@ -12,12 +12,11 @@ const calculateExpression = (number1, number2, operator) => {
 };
 
 const operators = ['+', '-', '*'];
-const maxIndex = 2;
 
 const generateRound = () => {
   const number1 = getRandomInt(0, 100);
   const number2 = getRandomInt(0, 100);
-  const operator = operators[getRandomInt(0, maxIndex)];
+  const operator = operators[getRandomInt(0, operators.length - 1)];
   const question = `${number1} ${operator} ${number2}`;
   const answer = String(calculateExpression(number1, number2, operator));
   return cons(question, answer);
